@@ -1,4 +1,4 @@
-package com.poojauppal.Ex09_PayloadManagement.Gson;
+package com.poojauppal.Pojos;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
