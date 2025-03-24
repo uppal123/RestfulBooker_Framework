@@ -27,4 +27,8 @@ public class AssertActions {
     public void verifyStringKeyNotNull(Integer keyExpect) {
         assertThat(keyExpect).isNotNull();
     }
+
+    public void verifyStringKeyNotNull(String keyExpect) {
+        assertThat(keyExpect).isNotNull();
+    }
 }

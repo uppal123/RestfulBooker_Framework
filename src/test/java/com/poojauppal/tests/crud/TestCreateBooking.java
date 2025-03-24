@@ -11,7 +11,7 @@ public class TestCreateBooking extends BaseTestClass {
 
     @Test(groups = "reg", priority = 1)
     @Description("Tc01 Verify Booking is created")
-    public void createBooking(){
+    public void CreateBooking_Post(){
         //preparation of request
         requestSpecification.basePath((APIConstents.Create_Booking_Update_URL));
 

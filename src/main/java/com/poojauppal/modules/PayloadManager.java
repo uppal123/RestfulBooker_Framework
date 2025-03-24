@@ -1,9 +1,7 @@
 package com.poojauppal.modules;
 
 import com.google.gson.Gson;
-import com.poojauppal.Pojos.Booking;
-import com.poojauppal.Pojos.BookingResponse;
-import com.poojauppal.Pojos.Bookingdates;
+import com.poojauppal.Pojos.*;
 
 public class PayloadManager {
     // Convert Java Objects to JSON
@@ -33,5 +31,23 @@ public class PayloadManager {
         gson = new Gson();
         BookingResponse bookingResponse = gson.fromJson(responseString, BookingResponse.class);
         return bookingResponse;
+    }
+
+    public String setauthPayload() {
+        Auth auth = new Auth();
+        auth.setUsername("admin");
+        auth.setPassword("password123");
+        gson = new Gson();
+        String jsonPayloadstring = gson.toJson(auth);
+        System.out.println("Json set to the-> " +jsonPayloadstring);
+        return jsonPayloadstring;
+    }
+
+    //Json to java
+    public String getTokenFromJson(String tokenResponse) {
+        gson = new Gson();
+        TokenResponse tokenResponse1 = gson.fromJson(tokenResponse, TokenResponse.class);
+        return tokenResponse1.getToken().toString();
+
     }
 }
