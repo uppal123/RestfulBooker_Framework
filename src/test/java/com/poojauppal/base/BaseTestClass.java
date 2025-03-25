@@ -34,7 +34,20 @@ public class BaseTestClass {
                 .setBaseUri(APIConstents.BaseUrl)
                 .addHeader("Content-type", "application/json")
                 .build().log().all();
+    }
 
+    public String getToken() {
+        requestSpecification = RestAssured.given()
+                .baseUri(APIConstents.BaseUrl)
+                .basePath(APIConstents.Auth_URL);
+        //select the payload
+        String payload = payloadManager.setauthPayload();
+        //get the token
+        response = requestSpecification.contentType(ContentType.JSON)
+                .body(payload).when().post();
 
+        //String Extraction
+        String token = payloadManager.getTokenFromJson(response.asString());
+        return token;
     }
 }
