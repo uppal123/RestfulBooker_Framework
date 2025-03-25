@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/poojauppal/Documents/IntelliJ/RestfulBooker Framework">
+        <classes>
+            <class name="com.poojauppal.tests.crud.TestCreateBooking">
+                <methods>
+                    <include name="createBooking"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

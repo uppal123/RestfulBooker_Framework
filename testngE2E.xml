@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test preserve-order="true" name="/Users/poojauppal/Documents/IntelliJ/RestfulBooker Framework">
+        <classes>
+            <class name="com.poojauppal.tests.integration.TestE2Eflow_01">
+                <methods>
+                    <include name="test_CreateBooking"/>
+                    <include name="test_SearchBooking"/>
+                    <include name="test_UpdateBooking"/>
+                    <include name="test_DeleteBooking"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
