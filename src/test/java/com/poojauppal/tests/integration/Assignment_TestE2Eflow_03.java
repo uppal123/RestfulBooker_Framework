@@ -27,5 +27,5 @@ public class Assignment_TestE2Eflow_03 extends BaseTestClass {
         assertActions.verifyStringKeyNotNull(allResponseJson.getBookingid());
         iTestContext.setAttribute("bookingid", allResponseJson.getBookingid());
     }
-
+//response is null...
 }
