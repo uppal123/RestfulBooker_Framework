@@ -2,6 +2,10 @@ package com.poojauppal.modules;
 
 import com.google.gson.Gson;
 import com.poojauppal.Pojos.*;
+import java.lang.reflect.Type;
+import com.google.gson.reflect.TypeToken;
+
+import java.util.List;
 
 public class PayloadManager {
     // Convert Java Objects to JSON
@@ -54,6 +58,17 @@ public class PayloadManager {
         gson = new Gson();
         Booking booking = gson.fromJson(getResponse,Booking.class);
         return booking;
+    }
+
+    public AllResponseJson getBookingidJson(String allbooking) {
+        gson = new Gson();
+        Type userListType = new TypeToken<List<AllResponseJson>>() {}.getType();
+        List<AllResponseJson> users = gson.fromJson(allbooking, userListType);
+        // Print all users
+        for (AllResponseJson user : users) {
+            System.out.println(user);
+        }
+        return (AllResponseJson) users;
     }
 
     public String fullUpdatePayloadAsString (){
